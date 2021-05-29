@@ -1,0 +1,53 @@
+<div class="page">
+    <!-- MODAL NOTIF -->
+    <div id="modnotif_login" class="modpass">
+        <div class="modcon">
+            <h3 style="margin-bottom: 2rem; text-align: center;" id="modnotif_login_pesan"></h3>			
+            <div class="row" style="text-align: center; margin-right: 1.5rem;">
+                <div style="width: 140px; margin: auto;"><a id="login_tutupnotif" style="background-color: #04203E; font-size: 12px" onclick="TutupModal('modnotif_login')" class="button button-fill tutup-btn">OK</a></div>				
+            </div>
+        </div>
+    </div>
+
+    <div class="page-content">
+        <div class="login-logo">
+            <img src="./img/drawable-ldpi/Logo.png" alt="">
+        </div>
+        <form class="form-ajax-login">
+            <div class="list head-login">
+                <ul>
+                    <li>
+                        <label><b>Email</b></label>
+                        <label class="asterisk-input"></label>
+                        <div class="mytextbox">
+                            <input placeholder="Masukan Email disini..." type="email" pattern="[^ @]*@[^ @]*" name="email-login" id="email-login">
+                        </div>
+                    </li>
+                    <li>
+                        <label><b>Password</b></label>
+                        <label class="asterisk-input"></label>
+                        <div class="mytextbox password">
+                            <input placeholder="Masukan Password disini..." type="password" name="password-login" id="password-login">
+                            <span id="show_password_login">
+                                <i id="eye-login" class="fa fa-eye" aria-hidden="true"></i>
+                            </span>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="list foot-login">
+                <ul>
+                    <li>
+                        <a id="btn-login" class="button button-raised button-fill mybtn">Masuk</a>
+                    </li>
+                    <li style="margin-top: 1rem;">
+                        <label style="margin: auto;">Belum punya akun ?</label>
+                    </li>
+                    <li>
+                        <a href="/register1/"><b>Daftar</b></a>
+                    </li>
+                </ul>
+            </div>
+        </form>
+    </div>
+</div>

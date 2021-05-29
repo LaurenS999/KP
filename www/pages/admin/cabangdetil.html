@@ -1,0 +1,89 @@
+<div class="page">
+    <!-- ADMIN TOOLBAR -->
+    <div class="admin_menu toolbar tabbar-labels toolbar-bottom">
+        <div class="toolbar-inner">
+            <a href="/beranda/" class="tab-link tab-link-active">
+                <i class="f7-icons">house_fill</i>
+                <span class="tabbar-label">Beranda</span>
+            </a>
+            <a href="/profile/" class="tab-link">
+                <i class="f7-icons">person_fill</i>
+                <span class="tabbar-label">Profile</span>
+            </a>
+        </div>
+    </div>
+
+    <!-- MODAL NOTIF -->
+	<div id="modnotif_cabang" class="modpass">
+		<div class="modcon">
+			<h3 style="margin-bottom: 2rem; text-align: center;" id="modnotif_cabang_pesan"></h3>			
+			<div class="row" style="text-align: center; margin-right: 1.5rem;">
+				<div style="width: 140px; margin: auto;"><a id="cabangdetil_tutupnotif" style="background-color: #04203E; font-size: 12px" onclick="TutupModal('modnotif_cabang')" href="/cabang/" class="button button-fill tutup-btn">OK</a></div>				
+			</div>
+		</div>
+	</div>
+
+    <!-- MODAL HAPUS -->
+	<div id="mod_cabang_hapus" class="modpass">
+		<div class="modcon">
+			<h5>Apakah yakin ingin menghapus cabang ?</h5>		
+			<div class="row" style="margin-right: 1.5rem;">
+				<div class="col-50"><a onclick="TutupModal('mod_cabang_hapus')" class="button button-fill tutup-btn">Batal</a></div>
+				<div class="col-50"><a onclick="HapusData('cabang')" class="button button-fill ganti-btn">Hapus</a></div>
+			</div>
+		</div>
+	</div>
+
+    <div class="page-content bg-custom">
+        <!-- TITLE -->
+        <div class="navbar" style="color: white; background-color: #04203E;">
+            <div class="navbar-inner ">
+                <div class="left">
+                    <a href="/cabang/" class="link icon-only">
+                        <i class="icon icon-back" style="color: white;"></i>
+                    </a>
+                </div>
+                <div class="title" id="cabang_titel_ubah">Ubah Cabang</div>
+                <div class="title" id="cabang_titel_tambah">Tambah Cabang</div>
+            </div>
+        </div>
+
+        <!-- FORM CONTENT -->
+        <div class="cabang-info">
+            <div class="card">
+                <h4 id="cabangdetil_id" hidden>ID Cabang</h4>
+                <h4>Nama
+    				<label class="asterisk-input"></label>
+                </h4>
+                <div class="mytextbox">
+                    <input placeholder="Ketik nama cabang disini..." type="text" name="cabangdetil_nama" id="cabangdetil_nama">
+                </div>
+            </div>
+            <div class="card">
+                <h4>Alamat
+    				<label class="asterisk-input"></label>
+                </h4>
+                <div class="mytextbox">
+                    <input placeholder="Ketik alamat cabang disini..." type="text" name="cabangdetil_Alamat" id="cabangdetil_Alamat">
+                </div>
+            </div>
+            <div class="card no-boxshadow">
+                <h4>Telepon
+    				<label class="asterisk-input"></label>
+                </h4>
+                <div class="mytextbox">
+                    <input placeholder="Ketik telepon cabang disini..." type="number" onkeydown="javascript: return event.keyCode == 69 ? false : true" name="cabangdetil_telpon" id="cabangdetil_telpon">
+                </div>
+            </div>
+            <div class="row" id="cabang_ubah">
+                <div class="col-50"><a class="button button-fill button-round" onclick="BukaModal('mod_cabang_hapus')">Hapus</a></div>
+                <div class="col-50"><a style="background: #04203E;" class="button button-fill button-round" onclick="UbahData('cabang')">Ubah</a></div>
+            </div>
+
+            <div class="row" id="cabang_tambah">                
+                <div class="col-100"><a style="background: #04203E;" class="button button-fill button-round" onclick="TambahData('cabang')">Tambah</a></div>
+            </div>
+        </div>
+        
+    </div>
+</div>
